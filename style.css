@@ -1,13 +1,12 @@
 body {
     font-family: Impact, sans-serif;
-    font-size: 6em; 
     text-align: center;
     margin-top: 10%;
     background-color:#000000;
     color: #f3f3f3;
   }
   #clock {
-    font-size: 6em;
+    font-size: 3em;
     font-weight: bold;
     color: #ff0000;
   }
