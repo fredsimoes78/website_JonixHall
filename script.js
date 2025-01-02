@@ -1,12 +1,13 @@
 function updateClock() {
-    const due_date = new Date('2034-11-10')
+    const due_date = new Date('2034-11-10T00:00:00')
     const now = new Date();
     const diff = due_date - now  //this is miliseconds
 
-    const days = String(diff.getDays()).padStart(4, '0');
-    const hours = String(diff.getHours()).padStart(2, '0');
-    const mins = String(diff.getMinutes()).padStart(2, '0');
-    const secs = String(diff.getSeconds()).padStart(2, '0');
+    // Calculate the remaining time
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));  // Total days remaining
+    const hours = Math.floor((diff / (1000 * 60 * 60)));  // Remaining hours
+    const mins = Math.floor((diff / (1000 * 60)));  // Remaining minutes
+    const secs = Math.floor((diff / (1000)));  // Remaining seconds
 
     document.getElementById('clock').textContent = `${days}${hours}:${mins}:${secs}`;
   }
